@@ -1,0 +1,87 @@
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification 
+for details on configuring this project to bundle and minify static web assets. */
+body {
+    background-image: url('../images/test5.jpg');
+}
+
+.h1, h2 {
+    font-size: 70px;
+    font-weight: 600;
+    background-image: linear-gradient(to left, white, #012606);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.as {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.p {
+    font-size:90px;
+}
+
+h3::before {
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+
+h3:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+h3::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    inset: 0 0 0 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(31, 87, 20, 1) 50%, rgba(71, 194, 169, 1) 85%);
+    z-index: -1;
+    transition: transform .3s ease;
+}
+
+h3 {
+    position: relative;
+    font-size: 5rem;
+}
+
+html {
+    block-size: 100%;
+    inline-size: 100%;
+}
+
+body {
+    min-block-size: 100%;
+    min-inline-size: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    display: grid;
+    place-content: center;
+    font-family: system-ui, sans-serif;
+}
+
+@media (orientation: landscape) {
+    body {
+        grid-auto-flow: column;
+    }
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+#myDIV {
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    margin-top: 20px;
+}
